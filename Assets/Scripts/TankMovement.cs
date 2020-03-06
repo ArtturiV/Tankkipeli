@@ -8,6 +8,8 @@ public class TankMovement : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField]
     float velo = 0;
+    float radsin;
+    float radcos;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,44 +19,34 @@ public class TankMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        radsin = Mathf.Sin(Mathf.PI * (transform.rotation.eulerAngles.z / 180));
+
+        radcos = Mathf.Cos(Mathf.PI * (transform.rotation.eulerAngles.z / 180));
         if (Input.GetKey("w"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, velo);
-            
+            rb.velocity = new Vector2(radsin * -velo, radcos * velo);
+
         }
         if (Input.GetKeyUp("w"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0f);
+            rb.velocity = new Vector2(0f, 0f);
         }
         if (Input.GetKey("s"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, -velo);
+            rb.velocity = new Vector2(radsin * velo, radcos * -velo);
 
         }
         if (Input.GetKeyUp("s"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0f);
+            rb.velocity = new Vector2(0f, 0f);
         }
-
-        if (Input.GetKey("a"))
+        if (Input.GetKeyDown("r"))
         {
-            rb.velocity = new Vector2(-velo, rb.velocity.y);
-
-        }
-        if (Input.GetKeyUp("a"))
-        {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
-        }
-        if (Input.GetKey("d"))
-        {
-            rb.velocity = new Vector2(velo, rb.velocity.y);
+            
+            print("Sin " + radsin);
+            print("Cos " + radcos);
 
         }
-        if (Input.GetKeyUp("d"))
-        {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
-        }
-        
-        rb.MoveRotation(rb.velocity.magnitude * 360);
+
     }
 }

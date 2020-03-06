@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5232352040107973303}
   - component: {fileID: 2242364459076223473}
   - component: {fileID: 4611691192875265537}
+  - component: {fileID: -5672206374565898658}
   m_Layer: 0
   m_Name: PHhull
   m_TagString: Untagged
@@ -118,3 +119,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2242364459076223473}
   velo: 1.5
+--- !u!114 &-5672206374565898658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6530998414892058036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e605583e7996a64f9f625ebda63defd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2242364459076223473}
+  degrees: 100
+  n1: a
+  n2: d
+  kulma: 0

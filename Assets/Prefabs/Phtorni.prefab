@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7674477780219752528}
   - component: {fileID: 9192211752105191508}
   - component: {fileID: -764815149257551834}
-  - component: {fileID: 9208332735585257121}
-  - component: {fileID: 5778593851897566754}
+  - component: {fileID: -3114026918111348597}
+  - component: {fileID: 441567026746791807}
   m_Layer: 0
   m_Name: Phtorni
   m_TagString: Untagged
@@ -105,32 +105,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!233 &9208332735585257121
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3428034663249575160}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 1
-  m_ConnectedRigidBody: {fileID: 2242364459076223473, guid: 6bae70c4055fc8b4d96500943255895d,
-    type: 3}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
---- !u!114 &5778593851897566754
+--- !u!114 &-3114026918111348597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,8 +114,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3428034663249575160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e605583e7996a64f9f625ebda63defd, type: 3}
+  m_Script: {fileID: 11500000, guid: 7761f184dda1e42469d09e433c1e672d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torni: {fileID: -764815149257551834}
+--- !u!114 &441567026746791807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428034663249575160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4d13b4452b1f649ba8dc8d1ecf8054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -764815149257551834}
   degrees: 100
+  n1: j
+  n2: l
