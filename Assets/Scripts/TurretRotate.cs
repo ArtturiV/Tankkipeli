@@ -15,11 +15,13 @@ public class TurretRotate : MonoBehaviour
     GameObject runko;
     TankRotate runkoRot;
     float apu;
+    [SerializeField]
+    string parent = null;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        runko = GameObject.Find("PHhull");
+        runko = GameObject.Find(parent);
         runkoRot = runko.GetComponent<TankRotate>();
     }
 

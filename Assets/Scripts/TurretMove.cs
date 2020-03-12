@@ -8,18 +8,20 @@ public class TurretMove : MonoBehaviour
     Rigidbody2D torni = null;
     GameObject runko;
     Rigidbody2D rb;
+    [SerializeField]
+    string parent = null;
     // Start is called before the first frame update
     void Start()
     {
         torni = GetComponent<Rigidbody2D>();
-        runko = GameObject.Find("PHhull");
+        runko = GameObject.Find(parent);
         rb = runko.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        torni.velocity = rb.velocity;
+        torni.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -1f);
 
     }
 }

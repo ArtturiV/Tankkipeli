@@ -5,14 +5,14 @@ using UnityEngine;
 public class TankRotate : MonoBehaviour
 {
     [SerializeField]
-    Rigidbody2D rb;
+    Rigidbody2D rb = null;
     [SerializeField]
     float degrees = 0;
     [SerializeField]
-    string n1;
+    string n1 = null;
     [SerializeField]
-    string n2;
-    public float kulma;
+    string n2 = null;
+    public float kulma = 0;
     // Start is called before the first frame update
     void Start()
     {
